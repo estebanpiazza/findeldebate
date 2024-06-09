@@ -75,3 +75,21 @@ button:hover {
     padding: 5px 0;
     border-bottom: 1px solid #ddd;
 }
+
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #ccc;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .popup.active {
+            display: block;
+        }
+        #shareLink {
+            display: none;
+        }
