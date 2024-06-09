@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimación de Combate Animal y Pilotaje</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>¿A quién le ganarías?</h1>
+        <button id="toggleListButton"><i class="fas fa-list"></i> Ver Lista Completa</button>
+        <div id="animalList" class="hidden">
+            <ul>
+                <li>Rata</li>
+                <li>Conejo</li>
+                <li>Gato</li>
+                <li>Zorro</li>
+                <li>Perro pequeño</li>
+                <li>Coyote</li>
+                <li>Lobo</li>
+                <li>Jaguar</li>
+                <li>León</li>
+                <li>Tigre</li>
+                <li>Oso negro</li>
+                <li>Gorila</li>
+                <li>Oso pardo</li>
+                <li>Oso polar</li>
+            </ul>
+        </div>
+
+        <form id="combatForm">
+            <label for="gender">Género:</label>
+            <select id="gender" required>
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+            </select>
+
+            <label for="weight">Peso (kg):</label>
+            <input type="number" id="weight" required>
+
+            <label for="height">Altura (cm):</label>
+            <input type="number" id="height" required>
+
+            <label for="martialArts">¿Sabes algún arte marcial o técnica de combate?</label>
+            <select id="martialArts" required>
+                <option value="yes">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Estimar</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Podrías vencer a:</h2>
+            <p id="previousAnimal" class="gray"></p>
+            <p id="animal"></p>
+            <p id="nextAnimal" class="gray"></p>
+        </div>
+
+        <h1>¿Podrías aterrizar un avión?</h1>
+        <form id="planeForm">
+            <label for="pilotKnowledge">¿Sabes pilotar aviones?</label>
+            <select id="pilotKnowledge" required>
+                <option value="yes">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Estimar</button>
+        </form>
+
+        <div id="planeResult" class="hidden">
+            <h2>Resultado:</h2>
+            <p id="planeAbility"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
